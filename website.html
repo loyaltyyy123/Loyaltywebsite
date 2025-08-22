@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website</title>
+    <!-- Free CDN for Font Awesome 7 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="stylesheet" href="website.css">
+   
+</head>
+<body>
+    <div>
+        <div class="container__header1">
+            <img src="	https://loyaltymethods.com/wp-content/uploads/2024/05/s0c-2.svg" alt="AICPA SOC Logo" class="soc-icon" />
+            <div class="header1-text">
+              ReactorCX completes its SOC 2<sup>®</sup> Audit! Security is our Top Priority.
+            <a href="#" class="learn-more1">Learn More <span>&#8250;</span></a>
+            </div>
+
+        </div>
+        <nav class="navbar">
+         <div class="navbar-left">
+           <img src="https://loyaltymethods.com/wp-content/uploads/2024/05/LM-Logo-1.svg" alt="Loyalty Methods Logo" class="logo">
+         </div>
+         <ul class="nav-menu">
+           <li><a href="#">Platform <span class="arrow">&#9662;</span></a></li>
+           <li><a href="#">Solutions <span class="arrow">&#9662;</span></a></li>
+           <li><a href="#">Case Studies</a></li>
+           <li><a href="#">About LM <span class="arrow">&#9662;</span></a></li>
+           <li><a href="#">Blog</a></li>
+         </ul>
+         <div class="navbar-right">
+           <a href="#" class="get-started">Get Started</a>
+         </div>
+        </nav>
+        <section class="container__main1">
+         <div class="container__main1__content">
+            <h1>Drive Engagement and Growth<br>with the Power of ReactorCX</h1>
+            <p class="container__main1__subheading">
+              Leverage the Platform that Runs some of the Largest and Most<br>Successful Programs in the World!
+            </p>
+          <div class="container__main1__features">
+            <ul>
+              <li><i class="fa fa-check-circle , color__li" ></i> Fast Real-time Loyalty and Discounting Engine</li>
+              <li ><i class="fa fa-check-circle , color__li" ></i> Advanced Loyalty and Discount Promotions</li>
+              <li ><i class="fa fa-check-circle , color__li" ></i> Flexible APIs and Event Streaming</li>
+              <li ><i class="fa fa-check-circle , color__li" ></i> Zero downtime. All the time.</li>
+            </ul>
+           </div>
+            <a href="#" class="container__main1__btn">Schedule a Demo</a>
+         </div>
+         <div class="container__main1__image">
+          <img src="https://loyaltymethods.com/wp-content/uploads/2024/10/hero-img.svg" alt="ReactorCX Diagram">
+         </div>
+        </section>
+        <section class="trusted-section">
+         <h2 class="trusted-title">TRUSTED BY</h2>
+
+         <div class="carousel-wrapper">
+         <div class="carousel" id="carousel">
+       <div class="carousel-track">
+        <div class="logo"><img src="https://loyaltymethods.com/wp-content/uploads/2024/06/logo-color-mgmresorts-collapsed-1.svg alt="BP" /></div>
+        <div class="logo"><img src="https://loyaltymethods.com/wp-content/uploads/2024/06/bp-logo-1.svg" alt="BP" /></div>
+        <div class="logo"><img src="https://loyaltymethods.com/wp-content/uploads/2024/06/speedway-logo-1.svg" alt="Speedway" /></div>
+        <div class="logo"><img src="https://loyaltymethods.com/wp-content/uploads/2024/06/Primary_YellowWhite-1.svg" alt="Western Union" /></div>
+        <div class="logo"><img src="https://loyaltymethods.com/wp-content/uploads/2024/06/ta-logo@logotyp.us-1.svg" alt="TA" /></div>
+        <div class="logo"><img src="https://loyaltymethods.com/wp-content/uploads/2024/06/Group-2-1.svg" alt="7Eleven" /></div>
+        <div class="logo"><img src="https://loyaltymethods.com/wp-content/uploads/2024/06/stripes-logo-1.svg" alt="Stripes" /></div>
+
+        <!-- Duplicate for infinite loop -->
+        <div class="logo"><img src="https://loyaltymethods.com/wp-content/uploads/2024/06/logo-color-mgmresorts-collapsed-1.svg" alt="MGM" /></div>
+        <div class="logo"><img src="https://loyaltymethods.com/wp-content/uploads/2024/06/bp-logo-1.svg" alt="BP" /></div>
+        <div class="logo"><img src="https://loyaltymethods.com/wp-content/uploads/2024/06/speedway-logo-1.svg" alt="Speedway" /></div>
+        <div class="logo"><img src="https://loyaltymethods.com/wp-content/uploads/2024/06/Primary_YellowWhite-1.svg" alt="Western Union" /></div>
+        <div class="logo"><img src="https://loyaltymethods.com/wp-content/uploads/2024/06/ta-logo@logotyp.us-1.svg" alt="TA" /></div>
+        <div class="logo"><img src="https://loyaltymethods.com/wp-content/uploads/2024/06/Group-2-1.svg" alt="7Eleven" /></div>
+        <div class="logo"><img src="https://loyaltymethods.com/wp-content/uploads/2024/06/stripes-logo-1.svg" alt="Stripes" /></div>
+      </div>
+     </div>
+
+    <!-- Navigation Arrows -->
+        <div class="arrow1 arrow-left" onclick="moveCarousel(-1)">&#10094;</div>
+        <div class="arrow1 arrow-right" onclick="moveCarousel(1)">&#10095;</div>
+        </div>
+       </section>
+
+<script>
+  let offset = 0;
+  const track = document.querySelector('.carousel-track');
+  const logos = document.querySelectorAll('.logo');
+  const logoCount = logos.length;
+  const visible = 5;
+  const step = 100 / visible;
+
+  function moveCarousel(dir) {
+    offset += dir;
+    if (offset < 0) offset = logoCount - visible;
+    if (offset > logoCount - visible) offset = 0;
+    track.style.transform = `translateX(-${offset * step}%)`;
+  }
+
+
+  // Auto-slide every 3s
+  setInterval(() => moveCarousel(1), 3000);
+</script>
+<section class="stats-section">
+  <div class="stat-box">
+    <h2>500M+</h2>
+    <p>Safely Migrated Memberships</p>
+  </div>
+  <div class="stat-box">
+    <h2>5B+</h2>
+    <p>Migrated Historical Transactions</p>
+  </div>
+  <div class="stat-box">
+    <h2>50M+</h2>
+    <p>Daily Processed Transactions</p>
+  </div>
+</section>
+<section class="why-section">
+  <h2 class="why-heading">Why Choose Loyalty Methods and ReactorCX?</h2>
+  <p class="why-subtext">
+    We bring all the components required for a truly innovative and enterprise-grade loyalty solution.
+  </p>
+</section>
+<section class="feature-section">
+  <div class="feature-box">
+    <div class="feature-top">
+      <div class="feature-heading">
+      <h3>Platform</h3>
+      <img src="https://loyaltymethods.com/wp-content/uploads/2024/06/stacks_24dp_FILL0_wght400_GRAD0_opsz24-1.webp" alt="Platform Icon" />
+      </div>
+      <p>ReactorCX is a best-in-class platform powering the world’s best-in-class programs.   <br></p>
+    </div>
+    <ul>
+      <li><span>Purpose-built for Loyalty and CX</span> This is not an after-thought or an add-on to another product. It is built from the ground up for Loyalty. </li>
+      <li><span>Real-time, API-first Design</span> Scalable speed of delivery and flexibility of integration are key design goals of ReactorCX.</li>
+      <li><span>Interactive Real-time Events</span> Drive real-time personalized experiences throughout a member journey at scale. </li>
+    </ul>
+    <div class="learn-more">
+    <a href="#" class="learn-btn">Learn more <span>→</span></a>
+    </div>
+  </div>
+
+  <div class="feature-box">
+    <div class="feature-top">
+      <div class="feature-heading">
+      <h3>Methodology</h3>
+      <img src="	https://loyaltymethods.com/wp-content/uploads/2024/06/api_24dp_FILL0_wght400_GRAD0_opsz24-1.webp" alt="Methodology Icon" />
+      </div>
+      <p>We bring a tried and true set of tools and methodology that has been successful for nearly two decades.</p>
+    </div>
+    <ul>
+      <li><span>Proven Success Track Record</span> We have never failed to deliver. Don’t take our word for it – talk to our customers.</li>
+      <li><span>Unique Project Management Approach</span>Our proprietary ThreadSyncTM methodology offers predictable, focused delivery in a complex enterprise world. </li>
+      <li><span>Verifiable Zero-risk Cut-overs</span>Our SafeSwitchTM tooling and method delivers truly zero-risk, zero-downtime cut-overs.</li>
+    </ul>
+    <div class="learn-more">
+    <a href="#" class="learn-btn">Learn more <span>→</span></a>
+    </div>
+  </div>
+
+  <div class="feature-box">
+    <div class="feature-top">
+      <div class="feature-heading">
+      <h3>Team</h3>
+      <img src="https://loyaltymethods.com/wp-content/uploads/2024/05/58fe630a2da0a42330306cf5775f0068-1.svg" alt="Team Icon" />
+      </div>
+      <p>Our team is passionate about Loyalty, with decades of experience and a dedication that’s hard to match.</p>
+    </div>
+    <ul>
+      <li><span>Strong Loyalty and CX Expertise</span>We can help you build a differentiated and nuanced program that resonates with your members. </li>
+      <li><span>Cross-industry Domain Expertise</span>We bring a truly diverse set of ideas and techniques stemming from our multi-industry work.</li>
+      <li><span>Large Implementation Expertise</span>We know how to operate in large and complex enterprises and get things done.</li>
+    </ul>
+    <div class="learn-more">
+    <a href="#" class="learn-btn">Learn more <span>→</span></a>
+    </div>
+  </div>
+  </section>
+  <section class="loyalty-heading">
+    <h2>Real-Time Loyalty Engagement Program</h2>
+  </section>
+  <div>
+    <img src="https://loyaltymethods.com/wp-content/uploads/2025/02/rcx-spider.png" alt="Loyalty Methods Logo" class="loyalty_logo">
+  </div>
+  <div class="extensible_tools">
+  <h2>Flexibility via Composable and Extensible Tools</h2>
+  <p class="subtitle">Handles Multiple LOBs and Industries</p>
+  </div>
+  
+  <div class="grid-container">
+    <div class="grid-item">
+      <div class="icon-circle"><i class="fa fa-store"></i></div>
+      <div class="grid-label">Retail and C-Store</div>
+    </div>
+
+    <div class="grid-item">
+      <div class="icon-circle"><i class="fa fa-tint "></i></div>
+      <div class="grid-label">Oil and Gas</div>
+    </div>
+
+    <div class="grid-item">
+      <div class="icon-circle"><i class="fas fa-bed"></i></div>
+      <div class="grid-label">Hospitality</div>
+    </div>
+
+    <div class="grid-item">
+      <div class="icon-circle"><i class="fas fa-dice"></i></div>
+      <div class="grid-label">Casino and Gaming</div>
+    </div>
+
+    <div class="grid-item">
+      <div class="icon-circle"><i class="fas fa-dollar-sign"></i></div>
+      <div class="grid-label">Finance</div>
+    </div>
+
+    <div class="grid-item">
+      <div class="icon-circle"><i class="fas fa-utensils"></i></div>
+      <div class="grid-label">Food & Beverage</div>
+    </div>
+
+    <div class="grid-item">
+      <div class="icon-circle"><i class="fas fa-plane"></i></div>
+      <div class="grid-label">Airlines</div>
+    </div>
+
+    <div class="grid-item">
+      <div class="icon-circle"><i class="fas fa-ship"></i></div>
+      <div class="grid-label">Cruise Line</div>
+    </div>
+  </div>
+  <div class="container__1">
+    <div class="card">
+      <div class="card-header">
+        <div class="icon_1">&#8679;&#8594;</div>
+        <h2><span class="highlight">Provides Flexible</span> Modeling</h2>
+      </div>
+      <ul class="ul_1">
+        <li>Polymorphic Activity</li>
+        <li>Non-Purchase Activity</li>
+        <li>SKU-Level Purchase Detail</li>
+        <li>Easy New Field Extensions</li>
+        <li>Model Change Propagation</li>
+        <li>Rule-based Custom Events</li>
+      </ul>
+    </div>
+    <div class="card">
+      <div class="card-header">
+        <div class="icon_1">&#9881;&#9881;</div>
+        <h2><span class="highlight">Handles Complex</span> Programs</h2>
+      </div>
+      <ul class="ul_1">
+        <li>Organize Rules with Folders</li>
+        <li>Test and Iterate Quickly</li>
+        <li>Granular Access Control</li>
+        <li>Custom Functions, Expressions & Events</li>
+        <li>Import/Export Rules b/w Environments</li>
+        <li>Dynamic Rule-based Segmentation</li>
+      </ul>
+    </div>
+  </div>
+  <section class="confidence-section">
+    <div class="content">
+      <h1>Implement with Confidence, Speed and Safety</h1>
+      <p>Switch from Legacy Systems with Zero Downtime and Zero Risk Guaranteed.</p>
+      <a href="#" class="cta-button">Discover the Methodology</a>
+    </div>
+    <div class="image">
+      <img src="https://loyaltymethods.com/wp-content/uploads/2024/10/Group.svg" alt="Illustration">
+    </div>
+  </section>
+  <section class="card_1-section">
+    <div class="card_1">
+      <div class="icon">
+        <i class="fas fa-sync-alt"></i>
+      </div>
+      <h3><span class="bold">ThreadSync</span><sup>™</sup><br>Project Methodology</h3>
+      <p>Discover the power of focused, parallel delivery.</p>
+      <a href="#" class="learn-button">Learn more <i class="fas fa-arrow-right"></i></a>
+    </div>
+    
+    <div class="card_1">
+      <div class="icon">
+        <i class="fas fa-toggle-on"></i>
+      </div>
+      <h3><span class="bold">SafeSwitch</span><sup>™</sup><br>Cut-over Process</h3>
+      <p>Switch out legacy systems with zero risk and zero downtime.</p>
+      <a href="#" class="learn-button">Learn more <i class="fas fa-arrow-right"></i></a>
+    </div>
+
+    <div class="card_1">
+      <div class="icon">
+        <i class="fas fa-hand-holding-heart"></i>
+      </div>
+      <h3>Experienced Team</h3>
+      <p>Work with top Loyalty talent with decades of experience.</p>
+      <a href="#" class="learn-button">Learn more <i class="fas fa-arrow-right"></i></a>
+    </div>
+  </section>
+  <div class="cus_h">
+    <h2>Our Customers Love Us</h2>
+  </div>
+  <section class="testimonial-section">
+    <div class="testimonial-card">
+      <div class="logo-circle">
+        <img src="https://loyaltymethods.com/wp-content/uploads/2025/02/bp-testimonial.png" alt="BP Logo">
+      </div>
+      <p class="testimonial-text">
+        Loyalty Methods has been a crucial partner, providing a flexible platform and bringing an experienced team
+        that has partnered well with BP to deliver on our initiatives with excellence and dedication.
+      </p>
+      <div class="divider"></div>
+      <div class="author">
+        <i class="fa-solid fa-star icon"></i>
+        <div>
+          <p class="name">Tarang Sethia</p>
+          <p class="position">Chief Product Officer & GM,<br>Digital Products, Mobility & Convenience, Americas, BP</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="testimonial-card">
+      <div class="logo-circle">
+        <img src="https://loyaltymethods.com/wp-content/uploads/2025/02/7-11-testimonial.png" alt="7-Eleven Logo">
+      </div>
+      <p class="testimonial-text">
+        They are experts in their space and provide excellent solutions, creativity and out of the box thinking.
+      </p>
+      <div class="divider"></div>
+      <div class="author">
+        <i class="fa-solid fa-star icon"></i>
+        <div>
+          <p class="name">Steve Kinch</p>
+          <p class="position">Innovation Leader,<br>7-Eleven</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="testimonial-card">
+      <div class="logo-circle">
+        <img src="	https://loyaltymethods.com/wp-content/uploads/2025/02/wu-testimonial.png" alt="Western Union Logo">
+      </div>
+      <p class="testimonial-text">
+        LM’s focus on innovation, agility, and successful, seamless delivery has made a massive difference in our efforts.
+      </p>
+      <div class="divider"></div>
+      <div class="author">
+        <i class="fa-solid fa-star icon"></i>
+        <div>
+          <p class="name">Lucy Donaldson</p>
+          <p class="position">Head Loyalty,<br>Martech & Consumer Ecosystems, Western Union</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div class="cta-section">
+  <div class="cta-text">
+    <h2>Drive loyalty success with one platform</h2>
+    <p>Choose the best in class solution, team and process to get there.</p>
+  </div>
+  <div class="cta-button">
+    <a href="#" class="button">Book a Demo</a>
+  </div>
+</div>
+<footer class="footer">
+  <div class="footer-column">
+    <h3>Why Loyalty Methods</h3>
+    <ul>
+      <li><a href="#">Why Choose us</a></li>
+      <li><a href="#">Case Studies</a></li>
+    </ul>
+
+    <h3>Company</h3>
+    <ul>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Careers</a></li>
+      <li><a href="#">Contact Us</a></li>
+    </ul>
+  </div>
+  <div class="footer_1">
+  <div class="footer-column">
+    <h3>Platform</h3>
+    <h4>Features</h4>
+    <ul>
+      <li><a href="#">Loyalty Engine</a></li>
+      <li><a href="#">Rewards/ Offers</a></li>
+      <li><a href="#">Preferences</a></li>
+      <li><a href="#">Personalization</a></li>
+      <li><a href="#">Member Care Portal</a></li>
+      <li><a href="#">FeedXChange</a></li>
+      <li><a href="#">Analytics</a></li>
+      <li><a href="#">Gamification</a></li>
+    </ul>
+  </div>
+
+  <div class="footer-column">
+    <h4>Technology</h4>
+    <ul>
+      <li><a href="#">Integration Model</a></li>
+      <li><a href="#">Processing Model</a></li>
+      <li><a href="#">Event Streaming & Processing</a></li>
+      <li><a href="#">Scalability</a></li>
+      <li><a href="#">Enterprise Readiness</a></li>
+    </ul>
+  </div>
+  </div>
+  <div class="footer_2">
+  <div class="footer_1">
+  <div class="footer-column">
+    <h3>Solutions</h3>
+    <h4>Industries</h4>
+    <ul>
+      <li><a href="#">Retail & C-store</a></li>
+      <li><a href="#">Oil & Gas</a></li>
+      <li><a href="#">Hospitality</a></li>
+      <li><a href="#">Casino & Gaming</a></li>
+      <li><a href="#">Finance</a></li>
+      <li><a href="#">Food & Beverage</a></li>
+      <li><a href="#">Airlines</a></li>
+      <li><a href="#">Cruise Line</a></li>
+    </ul>
+  </div>
+
+  <div class="footer-column">
+    <h4>For Industries</h4>
+    <ul>
+      <li><a href="#">ThreadSyncTM</a></li>
+      <li><a href="#">SafeSwitchTM</a></li>
+    </ul>
+  </div>
+  </div>
+  <div class="footer-column">
+    <h3>Legal</h3>
+    <ul>
+      <li><a href="#">Privacy Policy</a></li>
+      <li><a href="#">SOC 2</a></li>
+    </ul>
+
+    <h3>Resources</h3>
+    <ul>
+      <li><a href="#">Blog</a></li>
+    
+    </ul>
+  </div>
+  </div>
+  <div class="footer-bottom">
+  <div class="footer-line"></div>
+  
+  <div class="footer-bottom-content">
+    <div class="footer-branding">
+      <img src="https://loyaltymethods.com/wp-content/uploads/2024/05/LoytaltyMethods-Logo-Menu-1.svg" alt="Loyalty Methods Logo" class="footer-logo" />
+      
+    </div>
+
+    <div class="footer-meta">
+      <p>© Loyalty Methods 2024 | <a href="#">Privacy</a></p>
+      <div class="footer-social-icons">
+        <a href="#"><img src="https://loyaltymethods.com/wp-content/uploads/2024/05/linkedin-1.svg" alt="LinkedIn" /></a>
+        <a href="#"><img src="https://loyaltymethods.com/wp-content/uploads/2024/05/Vector.svg" alt="X (Twitter)" /></a>
+      </div>
+    </div>
+
+    <div class="footer-certification">
+      <img src="https://loyaltymethods.com/wp-content/uploads/2024/05/s0c-2.svg" alt="AICPA SOC Badge" />
+    </div>
+  </div>
+</div>
+
+</footer>
+
+    </div>
+</body>
+</html>
